@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-sec-xbrl",
+  "version": "0.1.0",
+  "description": "SEC XBRL MCP — wraps SEC EDGAR XBRL API (data.sec.gov)",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "sec-xbrl"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-sec-xbrl"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
