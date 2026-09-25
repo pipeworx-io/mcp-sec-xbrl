@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/sec-xbrl",
   "title": "Sec Xbrl",
   "description": "SEC XBRL MCP — wraps SEC EDGAR XBRL API (data.sec.gov)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/sec-xbrl",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-sec-xbrl",
