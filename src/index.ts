@@ -926,7 +926,7 @@ const tools: McpToolExport['tools'] = [
   {
     name: 'get_company_financials',
     description:
-      'High-level summary of a public US company\'s annual (10-K) financials: revenue, net income, total assets, cash, EPS, etc. Returns clean numerical values with the XBRL tag used and the period-end date. By default returns the most recent fiscal year; pass `fiscal_year_end` to get a specific year (e.g. "2024-12-31" for Tesla FY2024 or just "2024" to auto-match the year). Prefer this over get_company_facts/get_company_concept for any single-company financial snapshot question. Pass a CIK (e.g. "320193") or a ticker (e.g. "AAPL"; auto-resolves to CIK).',
+      'High-level summary of a public US company\'s annual (10-K) financials: revenue, net income, total assets, cash, EPS, etc. Returns clean numerical values with the XBRL tag used and the period-end date. By default returns the most recent fiscal year; pass `fiscal_year_end` to get a specific year (e.g. "2024-12-31" for Tesla FY2024 or just "2024" to auto-match the year). Prefer this over get_company_facts/get_company_concept for any single-company financial snapshot question. Pass a CIK (e.g. "320193") or a ticker (e.g. "AAPL"; auto-resolves to CIK). ANNUAL (10-K) figures only: for a quarterly (10-Q) figure or the latest quarter, edgar_company_concept returns both.',
     inputSchema: {
       type: 'object',
       properties: {

@@ -2,7 +2,7 @@
 
 SEC XBRL MCP — wraps SEC EDGAR XBRL API (data.sec.gov)
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1683+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1684+ live data sources.
 
 ## Tools
 
@@ -11,7 +11,7 @@ Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents 
 | `get_company_facts` | List all XBRL taxonomies and concept tags filed by a company (CIK required). Returns entity name, taxonomy names (us-gaap, dei, etc.), concept count per taxonomy, and a sample of up to 20 tag names each. Use get_company_concept or get_company_financials to retrieve actual numeric values for a specific tag. |
 | `get_company_concept` | Get a specific financial metric for a company across all filings. Use this to track revenue, net income, or any XBRL tag over time. Example: get_company_concept(cik: "320193", taxonomy: "us-gaap", tag: "Revenue"). |
 | `search_filings` | Search recent SEC filings for a company by CIK. Optionally filter by filing type (10-K, 10-Q, 8-K, etc.). Returns filing dates, types, and accession numbers. |
-| `get_company_financials` | High-level summary of a public US company's annual (10-K) financials: revenue, net income, total assets, cash, EPS, etc. Returns clean numerical values with the XBRL tag used and the period-end date. By default returns the most recent fiscal year; pass `fiscal_year_end` to get a specific year (e.g. "2024-12-31" for Tesla FY2024 or just "2024" to auto-match the year). Prefer this over get_company_facts/get_company_concept for any single-company financial snapshot question. Pass a CIK (e.g. "320193") or a ticker (e.g. "AAPL"; auto-resolves to CIK). |
+| `get_company_financials` | High-level summary of a public US company's annual (10-K) financials: revenue, net income, total assets, cash, EPS, etc. Returns clean numerical values with the XBRL tag used and the period-end date. By default returns the most recent fiscal year; pass `fiscal_year_end` to get a specific year (e.g. "2024-12-31" for Tesla FY2024 or just "2024" to auto-match the year). Prefer this over get_company_facts/get_company_concept for any single-company financial snapshot question. Pass a CIK (e.g. "320193") or a ticker (e.g. "AAPL"; auto-resolves to CIK). ANNUAL (10-K) figures only: for a quarterly (10-Q) figure or the latest quarter, edgar_company_concept returns both. |
 | `get_liquidity_runway` | Estimate a company’s mechanical liquidity runway from its latest SEC-tagged cash/current investments and trailing-twelve-month operating cash flow. This is a screening calculation—not management guidance—and excludes future financing, commitments, restricted access, working-capital timing, and forecast changes. |
 | `get_dilution_profile` | Summarize SEC-tagged common shares outstanding, approximate year-over-year share change, and reported equity issuance proceeds. Share-count dates need not equal quarter end, tags vary by filer, and this is not a fully diluted capitalization table. |
 | `get_rnd_burn_profile` | Calculate trailing-twelve-month SEC-tagged R&D expense and operating cash flow using annual plus current YTD minus prior-year comparable YTD. Returns the periods used and null when a defensible bridge cannot be built. |
@@ -61,7 +61,7 @@ directly, instead of just this one's:
 }
 ```
 
-Both URLs reach the same gateway and the same 1683+ data sources. The
+Both URLs reach the same gateway and the same 1684+ data sources. The
 only difference is which pack's tools are listed **directly**; `ask_pipeworx`
 reaches all of them from either one.
 
