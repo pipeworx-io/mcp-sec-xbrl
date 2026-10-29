@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-sec-xbrl",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "SEC XBRL MCP — wraps SEC EDGAR XBRL API (data.sec.gov)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-sec-xbrl": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "sec-xbrl"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-sec-xbrl.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/sec-xbrl",
   "pipeworx": {
-    "sourceHash": "v1-cd8c4d677a7ebce9eec5c3b85bf76d867635b02677347ead1e285d5254d5ed54",
-    "sourceCommit": "eaa02971997fbfee27712ea66d7d5fd840d008ea"
+    "mode": "gateway",
+    "slug": "sec-xbrl",
+    "gatewaySlug": "sec-xbrl",
+    "sourceHash": "v1-41e5bd350220bd05254cd0d8e1c9a80090c1546cc466a6411a02056bbb662f0d",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }
