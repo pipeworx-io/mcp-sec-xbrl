@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-sec-xbrl",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "SEC XBRL MCP — wraps SEC EDGAR XBRL API (data.sec.gov)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "sec-xbrl",
     "gatewaySlug": "sec-xbrl",
-    "sourceHash": "v1-41e5bd350220bd05254cd0d8e1c9a80090c1546cc466a6411a02056bbb662f0d",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-702ad69739edc898e92456a2212a211e49aafbb95cf8dca2167ea3dd9ddd1d21",
+    "sourceCommit": "8fc802aa5e23be625ce08d97178f5676c7bc93f3"
   }
 }
